@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
-import { Label, Percentage } from "./StatsStyled";
+import { ListItem, Label, Percentage } from "./StatsStyled";
 
-export const Stats = ({ item: { label, percentage } }) => {
+
+export const Stats = ({ ind, item: { label, percentage } }) => {
     return (
-        <>
+        <ListItem ind={ind}>
             <Label>{label}</Label>
             <Percentage>{percentage}%</Percentage>
-        </>       
+        </ListItem>       
     )
 }
 

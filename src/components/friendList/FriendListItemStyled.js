@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+
+export const ListItem = styled.li`
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 10px 0;
+    background: ${props => props.theme.colors.white};
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+`;
+
 export const Status = styled.span`
     width: 15px;
     height: 15px;

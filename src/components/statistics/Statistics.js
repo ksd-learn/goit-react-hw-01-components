@@ -1,16 +1,15 @@
 import { Stats } from "./Stats";
 import PropTypes from 'prop-types';
-import { List, ListItem, ListTitle, ListSection } from "./StatisticsStyled";
+import { List, ListTitle, ListSection } from "./StatisticsStyled";
 
-export const Statistics = ({ data }) => {
+
+export const Statistics = ({ title="Upload stats", data }) => {
     return (
         <ListSection>
-            <ListTitle>Upload stats</ListTitle>
-            <List p='h'>
+            <ListTitle>{title}</ListTitle>
+            <List>
                 {data.map((item, index) => (  
-                    <ListItem key={item.id} ind={index}>
-                        <Stats item={item} />
-                    </ListItem>
+                    <Stats key={item.id} ind={index} item={item} />
                 ))}
             </List>
         </ListSection>
