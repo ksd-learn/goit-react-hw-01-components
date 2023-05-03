@@ -12,8 +12,14 @@ import { PageStyled } from "../styled/AppStyled";
 export const App = () => {
   return (
     <PageStyled>
-      <Profile item={user} />
-      <Statistics data={dataStats} />
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" data={dataStats} />
       <FriendList friends={friends} />
       <TransactionHistory dataBase={transactions} />
     </PageStyled>

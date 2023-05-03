@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { TableData } from "./TransactionHistoryLineStyled";
 
 
-export const TransactionHistoryLine = ({ line: { id, type, amount, currency }, ind }) => {
+export const TransactionHistoryLine = ({ line: { type, amount, currency }, ind }) => {
     
     return (
         <tr>

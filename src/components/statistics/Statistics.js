@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { List, ListTitle, ListSection } from "./StatisticsStyled";
 
 
-export const Statistics = ({ title="Upload stats", data }) => {
+export const Statistics = ({ title, data }) => {
+
     return (
         <ListSection>
-            <ListTitle>{title}</ListTitle>
+            {title && <ListTitle>{title}</ListTitle>}
             <List>
                 {data.map((item, index) => (  
                     <Stats key={item.id} ind={index} item={item} />
